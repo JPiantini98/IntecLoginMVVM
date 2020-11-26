@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMLogin.Views.HomePage"
+             BarBackgroundColor="#D90812">
+  <!--Pages can be added as references or inline-->
+    
+    <ContentPage Title="Home" IconImageSource="home.png">
+        <Grid RowSpacing="20" ColumnSpacing="20" Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label 
+                Grid.Row="0" 
+                Grid.Column="0"
+                Grid.ColumnSpan="2" 
+                Text="Home" 
+                FontSize="Title" 
+                HorizontalTextAlignment="Center"
+            />
+            
+            <BoxView Grid.Row="1" Grid.Column="0" BackgroundColor="Wheat" CornerRadius="10"/>
+            <BoxView Grid.Row="1" Grid.Column="1" BackgroundColor="Wheat" CornerRadius="10"/>
+            <BoxView Grid.Row="2" Grid.Column="0" BackgroundColor="Wheat" CornerRadius="10"/>
+            <BoxView Grid.Row="2" Grid.Column="1" BackgroundColor="Wheat" CornerRadius="10"/>
+            <BoxView Grid.Row="3" Grid.Column="0" BackgroundColor="Wheat" CornerRadius="10"/>
+            <BoxView Grid.Row="3" Grid.Column="1" BackgroundColor="Wheat" CornerRadius="10"/>
+
+            <Label Text="{Binding Name}" FontSize="Title" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Text="{Binding LastName}" FontSize="Title" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Text="{Binding Initials}" FontSize="Title" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Text="{Binding Age}" FontSize="Title" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Image Source="{Binding Nationality}" Grid.Row="3" Grid.Column="0" Margin="30"/>
+            <Image Source="{Binding Gender}" Grid.Row="3" Grid.Column="1" Margin="30"/>
+
+        </Grid>
+    </ContentPage>
+    
+    <ContentPage Title="Discovery" IconImageSource="discovery.png">
+        
+    </ContentPage>
+    
+    <ContentPage Title="Bookmarks" IconImageSource="bookmark.png">
+        
+    </ContentPage>
+    
+    <ContentPage Title="Top Foods" IconImageSource="topFood.png">
+        
+    </ContentPage>
+
+    <ContentPage Title="Profile" IconImageSource="profile.png">
+
+    </ContentPage>
+    
+</TabbedPage>

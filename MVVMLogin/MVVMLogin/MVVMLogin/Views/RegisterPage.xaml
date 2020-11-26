@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMLogin.Views.RegisterPage">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <StackLayout HorizontalOptions="Fill" VerticalOptions="Center" Padding="20">
+                <Button Text="Home" TextColor="White" BackgroundColor="#D90812" CornerRadius="10"/>
+                <Button Text="Item 1" TextColor="White" BackgroundColor="#D90812" CornerRadius="10"/>
+                <Button Text="Item 2" TextColor="White" BackgroundColor="#D90812" CornerRadius="10"/>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <NavigationPage BarBackgroundColor="#D90812">
+            <x:Arguments>
+                <ContentPage>
+                    <StackLayout HorizontalOptions="Fill" VerticalOptions="Center" Padding="20">
+                        <Label Text="REGISTRATION" FontSize="Title" HorizontalTextAlignment="Center"/>
+                        <Image Source="intecLogo2.png"/>
+                        <Entry Text="{Binding Name}" Placeholder="Name"/>
+                        <Entry Text="{Binding Email}" Placeholder="Email"/>
+                        <Entry Text="{Binding Password}" IsPassword="True" Placeholder="Password"/>
+                        <Entry Text="{Binding PasswordVerify}" IsPassword="True" Placeholder="Confirm Password"/>
+                        <Button Command="{Binding RegisterCommand}"
+                            Text="Register" 
+                            TextColor="White" 
+                            BackgroundColor="#D90812" 
+                            CornerRadius="10"
+                        />
+                    </StackLayout>
+                </ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+
+    </MasterDetailPage.Detail>
+    
+</MasterDetailPage>
